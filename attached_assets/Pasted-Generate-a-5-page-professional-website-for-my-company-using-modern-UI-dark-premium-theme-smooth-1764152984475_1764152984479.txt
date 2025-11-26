@@ -1,0 +1,371 @@
+Generate a 5-page professional website for my company using modern UI (dark + premium theme), smooth animations, clean layout, and mobile responsiveness. Use TailwindCSS or similar utility styling. The website must include all the content and structure mentioned below. The brand name is “BrandOps”.
+
+🎨 OVERALL WEBSITE REQUIREMENTS
+
+Total pages: Home, About Us, Services, Pricing, Contact
+
+Premium, modern UI (dark theme preferred)
+
+Smooth fade-in animations, hover effects
+
+Sticky navbar with links to all pages
+
+Footer with company links, services, and social icons
+
+Mobile responsive layout
+
+Add call-to-action buttons on all pages
+
+🏠 PAGE 1 — HOME PAGE (LANDING PAGE)
+HERO SECTION
+
+Include all of the following lines:
+
+“You’re not a typical agency.”
+
+“Not just a dev shop.”
+
+“Not just marketing.”
+
+“Not just automation.”
+
+We are a Brand Growth Partner: A hybrid between Tech Studio + Marketing Partner + Automation Hub.
+
+“A Complete Growth Stack for Modern Brands.”
+
+Tech + Marketing + Automation + Strategy — all in one place.
+
+Add a Book Free Strategy Call button.
+
+SECTIONS TO INCLUDE ON HOMEPAGE
+✔ What We Do
+
+3 columns showing:
+
+Technology Services
+
+Marketing & Growth
+
+Operations & Business Services
+
+✔ Why Choose Us
+
+Bullet points:
+
+End-to-end ecosystem
+
+Tech + Marketing + Automation
+
+Fast execution
+
+Data-driven growth
+
+ROI-focused approach
+
+Long-term partnership
+
+✔ Workflow
+
+Show these 8 steps visually:
+
+Discovery Call
+
+Requirement Mapping
+
+Proposal & Pricing
+
+Onboarding
+
+Build Phase
+
+Testing & Go-live
+
+Growth & Optimization
+
+Long-term Partnership
+
+✔ Testimonials
+
+Add 3 sample testimonials with photo placeholders.
+
+✔ FAQs
+
+Include at least 6 FAQs related to:
+
+services
+
+timeline
+
+pricing structure
+
+onboarding process
+
+technology stack
+
+creator collaborations
+
+✔ Final CTA Section
+
+“Book Your Free Strategy Call” button.
+
+👥 PAGE 2 — ABOUT US PAGE
+
+Include:
+
+Vision Statement
+
+“To combine technology, promotion, automation, and brand strategy under one unified ecosystem, making growth simple, measurable, and affordable for every business.”
+
+Who We Are
+
+Explain BrandOps as:
+
+Tech + Marketing + Automation hybrid
+
+Brand growth partner
+
+Outcome-focused team
+
+Our Values
+
+List:
+
+Innovation
+
+Transparency
+
+Customer obsession
+
+Data-driven strategies
+
+Automation-first mindset
+
+Long-term partnerships
+
+Team Section
+
+Add 3–4 placeholder team members with roles:
+
+Founder / CEO
+
+Tech Lead
+
+Marketing Lead
+
+Automation Architect
+
+🛠️ PAGE 3 — SERVICES PAGE (WITH ALL SERVICE DETAILS BELOW)
+
+Divide into 3 large sections with subservices exactly as follows:
+
+A. TECHNOLOGY SERVICES (BrandTech Development Suite)
+
+Headline: Everything a modern business needs to run digitally.
+
+1. Website & App Development
+
+List all items:
+
+Business websites
+
+E-commerce websites
+
+Portfolio/creator websites
+
+Landing pages
+
+Mobile apps (Android/iOS)
+
+Custom dashboards for brand operations
+
+2. Automation & Workflow Tools
+
+Policy-based automations (CRM triggers, email sequences)
+
+Internal workflow automation
+
+Integrations with Shopify, Razorpay, Meta, Google Ads, WhatsApp API
+
+Business intelligence dashboards
+
+AI-based tools (chatbots, assistants, content generators)
+
+3. Digital Infrastructure Setup
+
+Cloud hosting (Azure/AWS)
+
+Database & backend
+
+CRM implementation
+
+IAM & access management
+
+Data tracking/analytics setup
+
+B. MARKETING & GROWTH SERVICES (Brand Promotion Suite)
+1. Influencer & Creator Collaborations
+
+Creator-brand matchmaking
+
+Campaign management
+
+Escrow-based execution
+
+ROI tracking
+
+ASCI-compliant workflows
+
+2. Performance Marketing
+
+Instagram Ads
+
+Facebook Ads
+
+Google Search & Display
+
+LinkedIn B2B ads
+
+Conversion-optimized landing pages
+
+Tracking & analytics (UTM, pixel, events)
+
+3. Brand Strategy & Content
+
+Brand identity creation
+
+Creative direction
+
+Social media strategy
+
+Content calendars
+
+Ad creatives & copy
+
+C. OPERATIONS & BUSINESS SERVICES (BrandOps Suite)
+1. Business Consulting
+
+Go-to-market strategy
+
+Competitor analysis
+
+Pricing strategy
+
+Product-market fit consulting
+
+Launch planning
+
+2. Customer Operations Setup
+
+CRM setup
+
+Feedback systems
+
+Ticketing systems
+
+Automation for customer retention
+
+Loyalty programs
+
+3. Campaign & Project Management
+
+End-to-end project handling
+
+Reporting dashboards
+
+Weekly/Monthly reviews
+
+📂 PAGE 4 — PRICING PAGE
+
+Title: Flexible Plans for Every Brand
+
+Create 3 pricing tiers:
+
+Starter Plan
+
+Basic website/landing page
+
+Essential automations
+
+Basic ads setup
+
+Email support
+
+Growth Plan
+
+Full website + automation
+
+Creator collaborations
+
+Performance ads
+
+Analytics dashboard
+
+WhatsApp automation
+
+Priority support
+
+Pro / Enterprise
+
+Fully customized solutions
+
+End-to-end BrandOps suite
+
+Dedicated manager
+
+Monthly strategy sessions
+
+AI & automation workflows
+
+Managed campaigns
+
+Custom dashboards
+
+Add CTA: Book a Consultation
+
+📞 PAGE 5 — CONTACT / BOOK CALL PAGE
+
+Include:
+
+Name
+
+Email
+
+Phone
+
+Business name
+
+Service interest (dropdown)
+
+Message box
+
+Add CTA: Book a Strategy Call
+
+Add:
+
+Email
+
+Phone
+
+Social links
+
+📌 Footer (Required on all pages)
+
+Sections:
+
+About
+
+Services
+
+Case Studies
+
+Pricing
+
+Contact
+
+Terms & Conditions
+
+Privacy Policy
+
+👇 Final Instruction
+
+Generate the entire website with all 5 pages exactly as described. Use clean UI, modern animations, responsive design, and professional styling
