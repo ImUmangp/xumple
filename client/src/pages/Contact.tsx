@@ -103,8 +103,8 @@ export default function Contact() {
                 {submitted ? (
                   <div className="text-center py-12">
                     <CheckCircle2 className="h-16 w-16 text-primary mx-auto mb-4" />
-                    <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-                    <p className="text-muted-foreground mb-6">
+                    <h2 data-testid="text-thank-you-title" className="text-2xl font-bold mb-2">Thank You!</h2>
+                    <p data-testid="text-thank-you-message" className="text-muted-foreground mb-6">
                       Your message has been sent successfully. We'll get back to you within 24 hours.
                     </p>
                     <Button
@@ -117,7 +117,7 @@ export default function Contact() {
                   </div>
                 ) : (
                   <>
-                    <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+                    <h2 data-testid="text-get-in-touch-title" className="text-2xl font-bold mb-6">Get in Touch</h2>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -265,7 +265,7 @@ export default function Contact() {
 
             <div className="space-y-8">
               <Card className="p-6">
-                <h3 className="font-semibold mb-4">Contact Information</h3>
+                <h3 data-testid="heading-contact-information" className="font-semibold mb-4">Contact Information</h3>
                 <div className="space-y-4">
                   <a
                     href="mailto:hello@brandops.com"
@@ -297,7 +297,7 @@ export default function Contact() {
               </Card>
 
               <Card className="p-6">
-                <h3 className="font-semibold mb-4">Follow Us</h3>
+                <h3 data-testid="heading-follow-us" className="font-semibold mb-4">Follow Us</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { icon: Linkedin, label: "LinkedIn", href: "#" },

@@ -169,6 +169,7 @@ export default function Services() {
                   {service.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
+                      data-testid={`item-tech-service-${index}-${itemIndex}`}
                       className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed"
                     >
                       <span className="text-primary mt-1 shrink-0">•</span>
@@ -210,6 +211,7 @@ export default function Services() {
                   {service.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
+                      data-testid={`item-marketing-service-${index}-${itemIndex}`}
                       className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed"
                     >
                       <span className="text-primary mt-1 shrink-0">•</span>
@@ -251,6 +253,7 @@ export default function Services() {
                   {service.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
+                      data-testid={`item-operations-service-${index}-${itemIndex}`}
                       className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed"
                     >
                       <span className="text-primary mt-1 shrink-0">•</span>

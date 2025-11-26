@@ -98,7 +98,7 @@ export default function About() {
                 Who We Are
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
+                <p data-testid="text-who-we-are-intro">
                   BrandOps is more than an agency—we're a{" "}
                   <span className="text-foreground font-semibold">
                     Brand Growth Partner
@@ -106,14 +106,14 @@ export default function About() {
                   that combines the best of three worlds:
                 </p>
                 <ul className="space-y-3 ml-6">
-                  <li className="flex items-start gap-2">
+                  <li data-testid="item-who-we-are-0" className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span>
                       <strong className="text-foreground">Tech Studio:</strong> Building
                       websites, apps, and automation tools that power modern businesses
                     </span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li data-testid="item-who-we-are-1" className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span>
                       <strong className="text-foreground">Marketing Partner:</strong>{" "}
@@ -121,7 +121,7 @@ export default function About() {
                       data-driven campaigns
                     </span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li data-testid="item-who-we-are-2" className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span>
                       <strong className="text-foreground">Automation Hub:</strong> Streamlining
@@ -130,7 +130,7 @@ export default function About() {
                     </span>
                   </li>
                 </ul>
-                <p>
+                <p data-testid="text-who-we-are-closing">
                   We're an outcome-focused team obsessed with helping brands grow faster,
                   smarter, and more efficiently. Instead of juggling multiple vendors, you get
                   one partner who understands the full picture.
@@ -140,11 +140,11 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-purple-500/20 to-pink-500/20 p-12 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl font-bold bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+                  <div data-testid="text-ecosystem-degree" className="text-6xl font-bold bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
                     360°
                   </div>
-                  <p className="text-xl font-semibold">Growth Ecosystem</p>
-                  <p className="text-muted-foreground mt-2">
+                  <p data-testid="text-ecosystem-title" className="text-xl font-semibold">Growth Ecosystem</p>
+                  <p data-testid="text-ecosystem-subtitle" className="text-muted-foreground mt-2">
                     Tech + Marketing + Automation
                   </p>
                 </div>
@@ -167,8 +167,8 @@ export default function About() {
                 className="p-8 hover-elevate transition-all duration-300 hover:-translate-y-1"
               >
                 <value.icon className="h-12 w-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 data-testid={`heading-value-${index}`} className="text-xl font-semibold mb-3">{value.title}</h3>
+                <p data-testid={`text-value-description-${index}`} className="text-muted-foreground leading-relaxed">
                   {value.description}
                 </p>
               </Card>
@@ -192,8 +192,8 @@ export default function About() {
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center text-2xl font-bold text-primary-foreground mx-auto mb-4">
                   {member.initial}
                 </div>
-                <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
+                <h3 data-testid={`text-team-name-${index}`} className="text-lg font-semibold mb-1">{member.name}</h3>
+                <p data-testid={`text-team-role-${index}`} className="text-sm text-muted-foreground">{member.role}</p>
               </Card>
             ))}
           </div>

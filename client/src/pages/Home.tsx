@@ -231,8 +231,8 @@ export default function Home() {
                 className="p-8 hover-elevate transition-all duration-300 hover:-translate-y-1"
               >
                 <service.icon className="h-12 w-12 text-primary mb-6" />
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 data-testid={`heading-service-${index}`} className="text-xl font-semibold mb-4">{service.title}</h3>
+                <p data-testid={`text-service-description-${index}`} className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
               </Card>
@@ -254,8 +254,8 @@ export default function Home() {
                 className="p-6 hover-elevate transition-all duration-300"
               >
                 <benefit.icon className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                <h3 data-testid={`heading-benefit-${index}`} className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                <p data-testid={`text-benefit-description-${index}`} className="text-sm text-muted-foreground">{benefit.description}</p>
               </Card>
             ))}
           </div>
@@ -278,8 +278,8 @@ export default function Home() {
                   {item.step}
                 </div>
                 <div className="mt-8">
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <h3 data-testid={`heading-workflow-${index}`} className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <p data-testid={`text-workflow-description-${index}`} className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
               </Card>
             ))}
@@ -300,7 +300,7 @@ export default function Home() {
                 className="p-8 hover-elevate transition-all duration-300"
               >
                 <Quote className="h-8 w-8 text-primary mb-4" />
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p data-testid={`text-testimonial-quote-${index}`} className="text-muted-foreground mb-6 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -308,8 +308,8 @@ export default function Home() {
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p data-testid={`text-testimonial-author-${index}`} className="font-semibold">{testimonial.author}</p>
+                    <p data-testid={`text-testimonial-role-${index}`} className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
               </Card>
@@ -332,9 +332,9 @@ export default function Home() {
                 className="border border-border rounded-lg px-6 bg-card"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-4">
-                  <span className="font-semibold">{faq.question}</span>
+                  <span data-testid={`text-faq-question-${index}`} className="font-semibold">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-4">
+                <AccordionContent data-testid={`text-faq-answer-${index}`} className="text-muted-foreground pb-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
