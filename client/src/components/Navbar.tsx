@@ -40,7 +40,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" data-testid="link-home">
             <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
-              BrandOps
+              Xumple
             </span>
           </Link>
 
@@ -59,10 +59,12 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button asChild data-testid="button-book-call" className="bg-primary hover:bg-primary/90">
-              <Link href="/contact">
-                Book Free Call
-              </Link>
+            <Button
+              asChild
+              data-testid="button-book-call"
+              className="bg-primary hover:bg-primary/90"
+            >
+              <Link href="/contact">Book Free Call</Link>
             </Button>
           </div>
 
@@ -71,11 +73,7 @@ export function Navbar() {
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
@@ -102,9 +100,7 @@ export function Navbar() {
               data-testid="button-mobile-book-call"
               className="w-full bg-primary hover:bg-primary/90"
             >
-              <Link href="/contact">
-                Book Free Call
-              </Link>
+              <Link href="/contact">Book Free Call</Link>
             </Button>
           </div>
         </div>

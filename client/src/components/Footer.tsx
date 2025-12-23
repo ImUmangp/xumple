@@ -40,7 +40,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent mb-4">
-              BrandOps
+              Xumple
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               A complete growth stack for modern brands. Tech + Marketing +
@@ -133,7 +133,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} BrandOps. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Xumple. All rights reserved.</p>
         </div>
       </div>
     </footer>
