@@ -1,5 +1,12 @@
 import { Link } from "wouter";
-import { Linkedin, Twitter, Instagram, Facebook, Mail, Phone } from "lucide-react";
+import {
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export function Footer() {
   const aboutLinks = [
@@ -36,7 +43,8 @@ export function Footer() {
               BrandOps
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              A complete growth stack for modern brands. Tech + Marketing + Automation + Strategy — all in one place.
+              A complete growth stack for modern brands. Tech + Marketing +
+              Automation + Strategy — all in one place.
             </p>
             <div className="space-y-2">
               <a
@@ -53,7 +61,7 @@ export function Footer() {
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">+1 (234) 567-890</span>
+                <span className="text-sm">+91 7903471714</span>
               </a>
             </div>
           </div>

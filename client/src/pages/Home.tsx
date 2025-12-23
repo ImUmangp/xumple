@@ -48,17 +48,20 @@ export default function Home() {
     {
       icon: Target,
       title: "End-to-end Ecosystem",
-      description: "Everything you need under one roof—no need for multiple agencies.",
+      description:
+        "Everything you need under one roof—no need for multiple agencies.",
     },
     {
       icon: Zap,
       title: "Fast Execution",
-      description: "Agile workflows and rapid deployment to get you to market faster.",
+      description:
+        "Agile workflows and rapid deployment to get you to market faster.",
     },
     {
       icon: BarChart3,
       title: "Data-driven Growth",
-      description: "Every decision backed by analytics and measurable outcomes.",
+      description:
+        "Every decision backed by analytics and measurable outcomes.",
     },
     {
       icon: Shield,
@@ -68,39 +71,76 @@ export default function Home() {
     {
       icon: Users,
       title: "Tech + Marketing + Automation",
-      description: "Unique hybrid model that combines all growth functions seamlessly.",
+      description:
+        "Unique hybrid model that combines all growth functions seamlessly.",
     },
     {
       icon: Handshake,
       title: "Long-term Partnership",
-      description: "We grow with you, adapting strategies as your business evolves.",
+      description:
+        "We grow with you, adapting strategies as your business evolves.",
     },
   ];
 
   const workflow = [
-    { step: 1, title: "Discovery Call", description: "Understand your goals and challenges" },
-    { step: 2, title: "Requirement Mapping", description: "Define scope and deliverables" },
-    { step: 3, title: "Proposal & Pricing", description: "Transparent, customized quotes" },
-    { step: 4, title: "Onboarding", description: "Seamless handoff and kickoff" },
-    { step: 5, title: "Build Phase", description: "Execution with regular updates" },
-    { step: 6, title: "Testing & Go-live", description: "Quality assurance and launch" },
-    { step: 7, title: "Growth & Optimization", description: "Continuous improvement cycles" },
-    { step: 8, title: "Long-term Partnership", description: "Ongoing support and scaling" },
+    {
+      step: 1,
+      title: "Discovery Call",
+      description: "Understand your goals and challenges",
+    },
+    {
+      step: 2,
+      title: "Requirement Mapping",
+      description: "Define scope and deliverables",
+    },
+    {
+      step: 3,
+      title: "Proposal & Pricing",
+      description: "Transparent, customized quotes",
+    },
+    {
+      step: 4,
+      title: "Onboarding",
+      description: "Seamless handoff and kickoff",
+    },
+    {
+      step: 5,
+      title: "Build Phase",
+      description: "Execution with regular updates",
+    },
+    {
+      step: 6,
+      title: "Testing & Go-live",
+      description: "Quality assurance and launch",
+    },
+    {
+      step: 7,
+      title: "Growth & Optimization",
+      description: "Continuous improvement cycles",
+    },
+    {
+      step: 8,
+      title: "Long-term Partnership",
+      description: "Ongoing support and scaling",
+    },
   ];
 
   const testimonials = [
     {
-      quote: "BrandOps transformed our digital presence completely. Their hybrid approach saved us months of coordination with multiple vendors.",
+      quote:
+        "BrandOps transformed our digital presence completely. Their hybrid approach saved us months of coordination with multiple vendors.",
       author: "Sarah Chen",
       role: "CEO, TechFlow",
     },
     {
-      quote: "The automation workflows alone have saved us 20+ hours per week. Plus, their marketing campaigns are driving real ROI.",
+      quote:
+        "The automation workflows alone have saved us 20+ hours per week. Plus, their marketing campaigns are driving real ROI.",
       author: "Michael Torres",
       role: "Founder, GrowthLabs",
     },
     {
-      quote: "Finally, a partner that understands both technology and marketing. The results speak for themselves—3x conversion in 6 months.",
+      quote:
+        "Finally, a partner that understands both technology and marketing. The results speak for themselves—3x conversion in 6 months.",
       author: "Priya Sharma",
       role: "CMO, NexGen Solutions",
     },
@@ -144,14 +184,14 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.15),transparent_50%)]" />
-        
+
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           <div className="space-y-3 mb-12">
             <p
               data-testid="text-hero-line-1"
               className="text-lg sm:text-xl text-muted-foreground animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]"
             >
-              You're not a typical agency.
+              We're not a typical agency.
             </p>
             <p
               data-testid="text-hero-line-2"
@@ -220,7 +260,10 @@ export default function Home() {
 
       <section className="py-20 lg:py-32 bg-card/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 data-testid="text-what-we-do-title" className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2
+            data-testid="text-what-we-do-title"
+            className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          >
             What We Do
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -231,8 +274,16 @@ export default function Home() {
                 className="p-8 hover-elevate transition-all duration-300 hover:-translate-y-1"
               >
                 <service.icon className="h-12 w-12 text-primary mb-6" />
-                <h3 data-testid={`heading-service-${index}`} className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p data-testid={`text-service-description-${index}`} className="text-muted-foreground leading-relaxed">
+                <h3
+                  data-testid={`heading-service-${index}`}
+                  className="text-xl font-semibold mb-4"
+                >
+                  {service.title}
+                </h3>
+                <p
+                  data-testid={`text-service-description-${index}`}
+                  className="text-muted-foreground leading-relaxed"
+                >
                   {service.description}
                 </p>
               </Card>
@@ -243,7 +294,10 @@ export default function Home() {
 
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 data-testid="text-why-choose-us-title" className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2
+            data-testid="text-why-choose-us-title"
+            className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          >
             Why Choose Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -254,8 +308,18 @@ export default function Home() {
                 className="p-6 hover-elevate transition-all duration-300"
               >
                 <benefit.icon className="h-8 w-8 text-primary mb-4" />
-                <h3 data-testid={`heading-benefit-${index}`} className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                <p data-testid={`text-benefit-description-${index}`} className="text-sm text-muted-foreground">{benefit.description}</p>
+                <h3
+                  data-testid={`heading-benefit-${index}`}
+                  className="text-lg font-semibold mb-2"
+                >
+                  {benefit.title}
+                </h3>
+                <p
+                  data-testid={`text-benefit-description-${index}`}
+                  className="text-sm text-muted-foreground"
+                >
+                  {benefit.description}
+                </p>
               </Card>
             ))}
           </div>
@@ -264,7 +328,10 @@ export default function Home() {
 
       <section className="py-20 lg:py-32 bg-card/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 data-testid="text-workflow-title" className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2
+            data-testid="text-workflow-title"
+            className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          >
             Our Workflow
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -278,8 +345,18 @@ export default function Home() {
                   {item.step}
                 </div>
                 <div className="mt-8">
-                  <h3 data-testid={`heading-workflow-${index}`} className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p data-testid={`text-workflow-description-${index}`} className="text-sm text-muted-foreground">{item.description}</p>
+                  <h3
+                    data-testid={`heading-workflow-${index}`}
+                    className="text-lg font-semibold mb-2"
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    data-testid={`text-workflow-description-${index}`}
+                    className="text-sm text-muted-foreground"
+                  >
+                    {item.description}
+                  </p>
                 </div>
               </Card>
             ))}
@@ -289,7 +366,10 @@ export default function Home() {
 
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 data-testid="text-testimonials-title" className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2
+            data-testid="text-testimonials-title"
+            className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          >
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -300,7 +380,10 @@ export default function Home() {
                 className="p-8 hover-elevate transition-all duration-300"
               >
                 <Quote className="h-8 w-8 text-primary mb-4" />
-                <p data-testid={`text-testimonial-quote-${index}`} className="text-muted-foreground mb-6 leading-relaxed">
+                <p
+                  data-testid={`text-testimonial-quote-${index}`}
+                  className="text-muted-foreground mb-6 leading-relaxed"
+                >
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -308,8 +391,18 @@ export default function Home() {
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
-                    <p data-testid={`text-testimonial-author-${index}`} className="font-semibold">{testimonial.author}</p>
-                    <p data-testid={`text-testimonial-role-${index}`} className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p
+                      data-testid={`text-testimonial-author-${index}`}
+                      className="font-semibold"
+                    >
+                      {testimonial.author}
+                    </p>
+                    <p
+                      data-testid={`text-testimonial-role-${index}`}
+                      className="text-sm text-muted-foreground"
+                    >
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -320,7 +413,10 @@ export default function Home() {
 
       <section className="py-20 lg:py-32 bg-card/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 data-testid="text-faq-title" className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2
+            data-testid="text-faq-title"
+            className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          >
             Frequently Asked Questions
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
@@ -332,9 +428,17 @@ export default function Home() {
                 className="border border-border rounded-lg px-6 bg-card"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-4">
-                  <span data-testid={`text-faq-question-${index}`} className="font-semibold">{faq.question}</span>
+                  <span
+                    data-testid={`text-faq-question-${index}`}
+                    className="font-semibold"
+                  >
+                    {faq.question}
+                  </span>
                 </AccordionTrigger>
-                <AccordionContent data-testid={`text-faq-answer-${index}`} className="text-muted-foreground pb-4">
+                <AccordionContent
+                  data-testid={`text-faq-answer-${index}`}
+                  className="text-muted-foreground pb-4"
+                >
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -346,11 +450,18 @@ export default function Home() {
       <section className="py-20 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-purple-500/10 to-background" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 data-testid="text-cta-title" className="text-3xl sm:text-4xl font-bold mb-6">
+          <h2
+            data-testid="text-cta-title"
+            className="text-3xl sm:text-4xl font-bold mb-6"
+          >
             Ready to Grow Your Brand?
           </h2>
-          <p data-testid="text-cta-description" className="text-lg text-muted-foreground mb-8">
-            Book a free strategy call and let's discuss how we can accelerate your growth.
+          <p
+            data-testid="text-cta-description"
+            className="text-lg text-muted-foreground mb-8"
+          >
+            Book a free strategy call and let's discuss how we can accelerate
+            your growth.
           </p>
           <Button
             asChild
