@@ -32,7 +32,7 @@ export default function Pricing() {
       popular: true,
     },
     {
-      name: "Pro / Enterprise",
+      name: "Partner Plan",
       description: "Complete solution for established brands",
       features: [
         "Fully customized solutions",
@@ -90,7 +90,9 @@ export default function Pricing() {
                 )}
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-sm text-muted-foreground">{plan.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {plan.description}
+                  </p>
                 </div>
                 <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((feature, featureIndex) => (
@@ -126,11 +128,18 @@ export default function Pricing() {
 
       <section className="py-20 lg:py-32 bg-card/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 data-testid="text-custom-pricing-title" className="text-3xl sm:text-4xl font-bold mb-6">
+          <h2
+            data-testid="text-custom-pricing-title"
+            className="text-3xl sm:text-4xl font-bold mb-6"
+          >
             Need a Custom Solution?
           </h2>
-          <p data-testid="text-custom-pricing-description" className="text-lg text-muted-foreground mb-8">
-            Every business is unique. Let's discuss your specific needs and create a tailored plan that works for you.
+          <p
+            data-testid="text-custom-pricing-description"
+            className="text-lg text-muted-foreground mb-8"
+          >
+            Every business is unique. Let's discuss your specific needs and
+            create a tailored plan that works for you.
           </p>
           <Button
             asChild

@@ -340,7 +340,7 @@ export default function Contact() {
                 </h3>
                 <div className="space-y-4">
                   <a
-                    href="mailto:hello@brandops.com"
+                    href="mailto:contact@xumple.in"
                     data-testid="link-contact-email"
                     className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                   >
@@ -351,7 +351,7 @@ export default function Contact() {
                       <p className="text-sm font-medium text-foreground">
                         Email
                       </p>
-                      <p className="text-sm">hello@brandops.com</p>
+                      <p className="text-sm">contact@xumple.in</p>
                     </div>
                   </a>
                   <a

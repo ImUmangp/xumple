@@ -48,12 +48,12 @@ export function Footer() {
             </p>
             <div className="space-y-2">
               <a
-                href="mailto:hello@brandops.com"
+                href="mailto:contact@xumple.in"
                 data-testid="link-footer-email"
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">hello@brandops.com</span>
+                <span className="text-sm">contact@xumple.in</span>
               </a>
               <a
                 href="tel:+1234567890"
@@ -61,7 +61,7 @@ export function Footer() {
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">+91 7903471714</span>
+                <span className="text-sm">+91 123 456 789</span>
               </a>
             </div>
           </div>
