@@ -21,15 +21,26 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
+import {
+  insertContactSubmissionSchema,
+  type InsertContactSubmission,
+} from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
-import { Mail, Phone, Linkedin, Twitter, Instagram, Facebook, CheckCircle2 } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
+  CheckCircle2,
+} from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-  
+
   const form = useForm({
     resolver: zodResolver(insertContactSubmissionSchema),
     defaultValues: {
@@ -57,14 +68,50 @@ export default function Contact() {
     onError: (error: any) => {
       toast({
         title: "Error",
-        description: error.message || "Failed to submit form. Please try again.",
+        description:
+          error.message || "Failed to submit form. Please try again.",
         variant: "destructive",
       });
     },
   });
+  const submitToGoogleForm = async (data: InsertContactSubmission) => {
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSeQX7q1T6Kd-cKtlPq-xk3heE09np8O_O5xeL-jWzhqDLAc2A/formResponse";
+
+    const formData = new FormData();
+
+    formData.append("entry.2116052852", data.name);
+    formData.append("entry.1558582620", data.email);
+    formData.append("entry.392677783", data.phone || "");
+    formData.append("entry.288713975", data.businessName || "");
+    formData.append("entry.74352180", data.serviceInterest || "");
+    formData.append("entry.606413858", data.message);
+
+    await fetch(formUrl, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors",
+    });
+  };
 
   const onSubmit = async (data: InsertContactSubmission) => {
-    submitMutation.mutate(data);
+    try {
+      await submitToGoogleForm(data);
+
+      setSubmitted(true);
+      form.reset();
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Submission failed. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const serviceOptions = [
@@ -90,7 +137,8 @@ export default function Contact() {
             data-testid="text-contact-subtitle"
             className="text-xl text-muted-foreground"
           >
-            Book a free strategy call and discover how BrandOps can accelerate your growth
+            Book a free strategy call and discover how BrandOps can accelerate
+            your growth
           </p>
         </div>
       </section>
@@ -103,9 +151,18 @@ export default function Contact() {
                 {submitted ? (
                   <div className="text-center py-12">
                     <CheckCircle2 className="h-16 w-16 text-primary mx-auto mb-4" />
-                    <h2 data-testid="text-thank-you-title" className="text-2xl font-bold mb-2">Thank You!</h2>
-                    <p data-testid="text-thank-you-message" className="text-muted-foreground mb-6">
-                      Your message has been sent successfully. We'll get back to you within 24 hours.
+                    <h2
+                      data-testid="text-thank-you-title"
+                      className="text-2xl font-bold mb-2"
+                    >
+                      Thank You!
+                    </h2>
+                    <p
+                      data-testid="text-thank-you-message"
+                      className="text-muted-foreground mb-6"
+                    >
+                      Your message has been sent successfully. We'll get back to
+                      you within 24 hours.
                     </p>
                     <Button
                       data-testid="button-submit-another"
@@ -117,135 +174,143 @@ export default function Contact() {
                   </div>
                 ) : (
                   <>
-                    <h2 data-testid="text-get-in-touch-title" className="text-2xl font-bold mb-6">Get in Touch</h2>
+                    <h2
+                      data-testid="text-get-in-touch-title"
+                      className="text-2xl font-bold mb-6"
+                    >
+                      Get in Touch
+                    </h2>
                     <Form {...form}>
-                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Name *</FormLabel>
-                            <FormControl>
-                              <Input
-                                data-testid="input-name"
-                                placeholder="Your full name"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email *</FormLabel>
-                            <FormControl>
-                              <Input
-                                data-testid="input-email"
-                                type="email"
-                                placeholder="your@email.com"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
+                      <form
+                        onSubmit={form.handleSubmit(onSubmit)}
+                        className="space-y-6"
+                      >
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                          <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Name *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    data-testid="input-name"
+                                    placeholder="Your full name"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Email *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    data-testid="input-email"
+                                    type="email"
+                                    placeholder="your@email.com"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Phone</FormLabel>
-                            <FormControl>
-                              <Input
-                                data-testid="input-phone"
-                                type="tel"
-                                placeholder="+1 (234) 567-890"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="businessName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Business Name</FormLabel>
-                            <FormControl>
-                              <Input
-                                data-testid="input-business-name"
-                                placeholder="Your company name"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                          <FormField
+                            control={form.control}
+                            name="phone"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Phone</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    data-testid="input-phone"
+                                    type="tel"
+                                    placeholder="+1 (234) 567-890"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={form.control}
+                            name="businessName"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Business Name</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    data-testid="input-business-name"
+                                    placeholder="Your company name"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
 
-                    <FormField
-                      control={form.control}
-                      name="serviceInterest"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Service Interest</FormLabel>
-                          <Select
-                            onValueChange={field.onChange}
-                            defaultValue={field.value}
-                          >
-                            <FormControl>
-                              <SelectTrigger data-testid="select-service-interest">
-                                <SelectValue placeholder="Select a service" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              {serviceOptions.map((service) => (
-                                <SelectItem
-                                  key={service}
-                                  value={service}
-                                  data-testid={`select-option-${service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                                >
-                                  {service}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        <FormField
+                          control={form.control}
+                          name="serviceInterest"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Service Interest</FormLabel>
+                              <Select
+                                onValueChange={field.onChange}
+                                defaultValue={field.value}
+                              >
+                                <FormControl>
+                                  <SelectTrigger data-testid="select-service-interest">
+                                    <SelectValue placeholder="Select a service" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {serviceOptions.map((service) => (
+                                    <SelectItem
+                                      key={service}
+                                      value={service}
+                                      data-testid={`select-option-${service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                                    >
+                                      {service}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
 
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message *</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              data-testid="textarea-message"
-                              placeholder="Tell us about your project or goals..."
-                              className="min-h-[150px]"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                        <FormField
+                          control={form.control}
+                          name="message"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Message *</FormLabel>
+                              <FormControl>
+                                <Textarea
+                                  data-testid="textarea-message"
+                                  placeholder="Tell us about your project or goals..."
+                                  className="min-h-[150px]"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
 
                         <Button
                           data-testid="button-submit-contact"
@@ -254,7 +319,9 @@ export default function Contact() {
                           className="w-full bg-primary hover:bg-primary/90"
                           disabled={submitMutation.isPending}
                         >
-                          {submitMutation.isPending ? "Sending..." : "Book a Strategy Call"}
+                          {submitMutation.isPending
+                            ? "Sending..."
+                            : "Book a Strategy Call"}
                         </Button>
                       </form>
                     </Form>
@@ -265,7 +332,12 @@ export default function Contact() {
 
             <div className="space-y-8">
               <Card className="p-6">
-                <h3 data-testid="heading-contact-information" className="font-semibold mb-4">Contact Information</h3>
+                <h3
+                  data-testid="heading-contact-information"
+                  className="font-semibold mb-4"
+                >
+                  Contact Information
+                </h3>
                 <div className="space-y-4">
                   <a
                     href="mailto:hello@brandops.com"
@@ -276,7 +348,9 @@ export default function Contact() {
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">Email</p>
+                      <p className="text-sm font-medium text-foreground">
+                        Email
+                      </p>
                       <p className="text-sm">hello@brandops.com</p>
                     </div>
                   </a>
@@ -289,7 +363,9 @@ export default function Contact() {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">Phone</p>
+                      <p className="text-sm font-medium text-foreground">
+                        Phone
+                      </p>
                       <p className="text-sm">+1 (234) 567-890</p>
                     </div>
                   </a>
@@ -297,7 +373,12 @@ export default function Contact() {
               </Card>
 
               <Card className="p-6">
-                <h3 data-testid="heading-follow-us" className="font-semibold mb-4">Follow Us</h3>
+                <h3
+                  data-testid="heading-follow-us"
+                  className="font-semibold mb-4"
+                >
+                  Follow Us
+                </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { icon: Linkedin, label: "LinkedIn", href: "#" },
@@ -312,7 +393,9 @@ export default function Contact() {
                       className="flex items-center gap-2 p-3 rounded-lg bg-accent/50 hover:bg-accent transition-colors"
                     >
                       <social.icon className="h-4 w-4 text-primary" />
-                      <span className="text-sm font-medium">{social.label}</span>
+                      <span className="text-sm font-medium">
+                        {social.label}
+                      </span>
                     </a>
                   ))}
                 </div>
