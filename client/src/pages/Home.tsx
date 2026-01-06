@@ -148,7 +148,7 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "What services does BrandOps provide?",
+      question: "What services does Xumple provide?",
       answer:
         "We offer a complete growth stack: Technology Services (websites, apps, automation), Marketing & Growth (performance ads, influencer collaborations, brand strategy), and Operations & Business Services (consulting, CRM setup, project management). Think of us as your hybrid partner combining a tech studio, marketing agency, and automation hub.",
     },
@@ -363,7 +363,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/*
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
@@ -410,7 +410,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      */}
       <section className="py-20 lg:py-32 bg-card/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
